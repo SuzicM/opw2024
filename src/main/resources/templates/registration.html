@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/login.css}">
+    <link rel="stylesheet" th:href="@{/registration.css}">
+    <title>Registration - Milan Travel</title>
+    <script th:inline="javascript">
+        /* Get the current date and format it as YYYY-MM-DD */
+        var currentDate = new Date();
+        var formattedDate = currentDate.toISOString().split('T')[0];
+    </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a th:href="@{/}" class="logo">Milan Travel</a>
+        <ul class="nav-list">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/registration}">Registration</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Registration Form -->
+<div class="login-container">
+    <div class="form-wrapper">
+        <h1>Registration</h1>
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Address" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" th:attr="max=${formattedDate}" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a th:href="@{/login}">Login here</a></p>
+    </div>
+</div>
+
+<!-- Inline JavaScript to set the formatted date variable -->
+<script th:inline="javascript">
+    var currentDate = new Date();
+    var formattedDate = currentDate.toISOString().split('T')[0];
+    document.getElementById('dob').max = formattedDate;
+</script>
+
+</body>
+</html>

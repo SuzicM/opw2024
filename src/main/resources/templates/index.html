@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/home.css}">
+
+    <title>Milan Travel</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a th:href="@{/}" class="logo">Milan Travel</a>
+        <ul class="nav-list">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/registration}">Registration</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/profile}">Profile</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Home Content -->
+<div class="home-container">
+    <h1>Welcome to Milan Travel Agency</h1>
+    <p>Discover Amazing destinations and plan your PERFECT trip with us.</p>
+</div>
+
+</body>
+</html>

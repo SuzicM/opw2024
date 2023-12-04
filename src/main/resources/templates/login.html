@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/login.css}">
+    <title>Login - Milan Travel</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a th:href="@{/}" class="logo">Milan Travel</a>
+        <ul class="nav-list">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/registration}">Registration</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Login Form -->
+<div class="login-container">
+    <div class="form-wrapper">
+        <h1>Login</h1>
+        <form>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a th:href="@{/registration}">Register here</a></p>
+    </div>
+</div>
+
+</body>
+</html>

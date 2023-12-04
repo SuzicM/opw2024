@@ -1,0 +1,63 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{/login.css}">
+    <link rel="stylesheet" th:href="@{/profile.css}">
+    <title>User Profile - Travel Agency</title>
+</head>
+<body>
+
+&lt;!&ndash; Navbar &ndash;&gt;
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">Travel Agency</a>
+        <ul class="nav-list">
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/registration}">Registration</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/profile}">Profile</a></li>
+        </ul>
+    </div>
+</nav>
+
+&lt;!&ndash; User Profile &ndash;&gt;
+<div class="profile-container">
+    <div class="profile-wrapper">
+        <div class="profile-left">
+            &lt;!&ndash; Placeholder for user photo (blank for now) &ndash;&gt;
+            <div class="profile-photo"></div>
+            &lt;!&ndash; Display user's first name and last name &ndash;&gt;
+            <h2 th:text="${user.firstName + ' ' + user.lastName}"></h2>
+        </div>
+        <div class="profile-right">
+            &lt;!&ndash; User attributes: email, date of birth, address, phone number &ndash;&gt;
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" th:value="${user.email}" disabled>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth:</label>
+                <input type="date" th:value="${user.dateOfBirth}" disabled>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" th:value="${user.address}" disabled>
+            </div>
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="tel" th:value="${user.phoneNumber}" disabled>
+            </div>
+            &lt;!&ndash; Buttons for changing password and saving changes &ndash;&gt;
+            <button type="button">Change Password</button>
+            <button type="button">Save Changes</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+-->
